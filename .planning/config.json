@@ -1,0 +1,9 @@
+{
+  "mode": "yolo",
+  "granularity": "coarse",
+  "parallelization": false,
+  "commit_docs": false,
+  "model_profile": "inherit",
+  "workflow": { "research": false, "plan_check": true, "verifier": true, "auto_advance": false },
+  "notes": "按当前会话明确的四项功能和统一 UI 要求顺序实施，保留审阅结果，不自动提交其他项目或远程发布。"
+}

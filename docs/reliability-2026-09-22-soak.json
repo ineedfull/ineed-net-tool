@@ -1,0 +1,613 @@
+{
+  "testedAt": "2026-09-22T12:49:06.061Z",
+  "platform": "darwin",
+  "durationMs": 120291,
+  "sent": 600,
+  "received": 600,
+  "retainedRows": 500,
+  "retainedLogs": 500,
+  "restartPreserved": true,
+  "pageErrors": [],
+  "samples": [
+    {
+      "elapsedMs": 5001,
+      "metrics": [
+        {
+          "type": "Browser",
+          "cpuPercent": 0,
+          "workingSetKiB": 173136
+        },
+        {
+          "type": "GPU",
+          "cpuPercent": 0,
+          "workingSetKiB": 103248
+        },
+        {
+          "type": "Utility",
+          "cpuPercent": 0,
+          "workingSetKiB": 46064
+        },
+        {
+          "type": "Tab",
+          "cpuPercent": 0,
+          "workingSetKiB": 210992
+        }
+      ]
+    },
+    {
+      "elapsedMs": 10016,
+      "metrics": [
+        {
+          "type": "Browser",
+          "cpuPercent": 0.09099786045880386,
+          "workingSetKiB": 174112
+        },
+        {
+          "type": "GPU",
+          "cpuPercent": 0.23541461012820825,
+          "workingSetKiB": 102912
+        },
+        {
+          "type": "Utility",
+          "cpuPercent": 0.0011151804247165895,
+          "workingSetKiB": 46096
+        },
+        {
+          "type": "Tab",
+          "cpuPercent": 0.5871157537710607,
+          "workingSetKiB": 217920
+        }
+      ]
+    },
+    {
+      "elapsedMs": 15025,
+      "metrics": [
+        {
+          "type": "Browser",
+          "cpuPercent": 0.07608676117313695,
+          "workingSetKiB": 172704
+        },
+        {
+          "type": "GPU",
+          "cpuPercent": 0.2366039816426043,
+          "workingSetKiB": 102880
+        },
+        {
+          "type": "Utility",
+          "cpuPercent": 0.00004992383619550015,
+          "workingSetKiB": 46112
+        },
+        {
+          "type": "Tab",
+          "cpuPercent": 0.681435670108322,
+          "workingSetKiB": 226448
+        }
+      ]
+    },
+    {
+      "elapsedMs": 20028,
+      "metrics": [
+        {
+          "type": "Browser",
+          "cpuPercent": 0.09510625157398635,
+          "workingSetKiB": 173232
+        },
+        {
+          "type": "GPU",
+          "cpuPercent": 0.2223119796310476,
+          "workingSetKiB": 102784
+        },
+        {
+          "type": "Utility",
+          "cpuPercent": 0,
+          "workingSetKiB": 46112
+        },
+        {
+          "type": "Tab",
+          "cpuPercent": 0.7854525933356398,
+          "workingSetKiB": 230160
+        }
+      ]
+    },
+    {
+      "elapsedMs": 25035,
+      "metrics": [
+        {
+          "type": "Browser",
+          "cpuPercent": 0.08001601942697453,
+          "workingSetKiB": 173360
+        },
+        {
+          "type": "GPU",
+          "cpuPercent": 0.23199266504643848,
+          "workingSetKiB": 102848
+        },
+        {
+          "type": "Utility",
+          "cpuPercent": 0,
+          "workingSetKiB": 46112
+        },
+        {
+          "type": "Tab",
+          "cpuPercent": 0.9302577774494398,
+          "workingSetKiB": 240240
+        }
+      ]
+    },
+    {
+      "elapsedMs": 30044,
+      "metrics": [
+        {
+          "type": "Browser",
+          "cpuPercent": 0.09979845633606638,
+          "workingSetKiB": 172640
+        },
+        {
+          "type": "GPU",
+          "cpuPercent": 0.22978800042808833,
+          "workingSetKiB": 102896
+        },
+        {
+          "type": "Utility",
+          "cpuPercent": 0.00009234664915441418,
+          "workingSetKiB": 46128
+        },
+        {
+          "type": "Tab",
+          "cpuPercent": 1.0547096739026478,
+          "workingSetKiB": 254512
+        }
+      ]
+    },
+    {
+      "elapsedMs": 35051,
+      "metrics": [
+        {
+          "type": "Browser",
+          "cpuPercent": 0.07822915595199695,
+          "workingSetKiB": 173776
+        },
+        {
+          "type": "GPU",
+          "cpuPercent": 0.22304175243339155,
+          "workingSetKiB": 102944
+        },
+        {
+          "type": "Utility",
+          "cpuPercent": 0,
+          "workingSetKiB": 46128
+        },
+        {
+          "type": "Tab",
+          "cpuPercent": 1.0718807809272493,
+          "workingSetKiB": 266640
+        }
+      ]
+    },
+    {
+      "elapsedMs": 40057,
+      "metrics": [
+        {
+          "type": "Browser",
+          "cpuPercent": 0.07616249797709168,
+          "workingSetKiB": 173952
+        },
+        {
+          "type": "GPU",
+          "cpuPercent": 0.22006455696531316,
+          "workingSetKiB": 102992
+        },
+        {
+          "type": "Utility",
+          "cpuPercent": 0,
+          "workingSetKiB": 46128
+        },
+        {
+          "type": "Tab",
+          "cpuPercent": 1.2511741066549393,
+          "workingSetKiB": 274480
+        }
+      ]
+    },
+    {
+      "elapsedMs": 45060,
+      "metrics": [
+        {
+          "type": "Browser",
+          "cpuPercent": 0.07470338977123137,
+          "workingSetKiB": 174000
+        },
+        {
+          "type": "GPU",
+          "cpuPercent": 0.2199511032690883,
+          "workingSetKiB": 103040
+        },
+        {
+          "type": "Utility",
+          "cpuPercent": 0,
+          "workingSetKiB": 46128
+        },
+        {
+          "type": "Tab",
+          "cpuPercent": 1.3746407275020773,
+          "workingSetKiB": 279632
+        }
+      ]
+    },
+    {
+      "elapsedMs": 50065,
+      "metrics": [
+        {
+          "type": "Browser",
+          "cpuPercent": 0.06764650222545776,
+          "workingSetKiB": 174064
+        },
+        {
+          "type": "GPU",
+          "cpuPercent": 0.22069322472699368,
+          "workingSetKiB": 103072
+        },
+        {
+          "type": "Utility",
+          "cpuPercent": 0,
+          "workingSetKiB": 46128
+        },
+        {
+          "type": "Tab",
+          "cpuPercent": 1.439410078156241,
+          "workingSetKiB": 292176
+        }
+      ]
+    },
+    {
+      "elapsedMs": 55068,
+      "metrics": [
+        {
+          "type": "Browser",
+          "cpuPercent": 0.07286615712406909,
+          "workingSetKiB": 174288
+        },
+        {
+          "type": "GPU",
+          "cpuPercent": 0.21942053352072996,
+          "workingSetKiB": 103120
+        },
+        {
+          "type": "Utility",
+          "cpuPercent": 0,
+          "workingSetKiB": 46128
+        },
+        {
+          "type": "Tab",
+          "cpuPercent": 1.5178257350148903,
+          "workingSetKiB": 319344
+        }
+      ]
+    },
+    {
+      "elapsedMs": 60071,
+      "metrics": [
+        {
+          "type": "Browser",
+          "cpuPercent": 0.08652218081613124,
+          "workingSetKiB": 174400
+        },
+        {
+          "type": "GPU",
+          "cpuPercent": 0.2243930463012983,
+          "workingSetKiB": 103232
+        },
+        {
+          "type": "Utility",
+          "cpuPercent": 0.00022733840785969334,
+          "workingSetKiB": 46160
+        },
+        {
+          "type": "Tab",
+          "cpuPercent": 1.6621287319171285,
+          "workingSetKiB": 332320
+        }
+      ]
+    },
+    {
+      "elapsedMs": 65076,
+      "metrics": [
+        {
+          "type": "Browser",
+          "cpuPercent": 0.10289020748388696,
+          "workingSetKiB": 175264
+        },
+        {
+          "type": "GPU",
+          "cpuPercent": 0.22385130244935852,
+          "workingSetKiB": 103312
+        },
+        {
+          "type": "Utility",
+          "cpuPercent": 0.0003846544264632654,
+          "workingSetKiB": 46160
+        },
+        {
+          "type": "Tab",
+          "cpuPercent": 1.6967483560742727,
+          "workingSetKiB": 369376
+        }
+      ]
+    },
+    {
+      "elapsedMs": 70080,
+      "metrics": [
+        {
+          "type": "Browser",
+          "cpuPercent": 0.08701958465771906,
+          "workingSetKiB": 175328
+        },
+        {
+          "type": "GPU",
+          "cpuPercent": 0.22677382474476254,
+          "workingSetKiB": 103344
+        },
+        {
+          "type": "Utility",
+          "cpuPercent": 0.0000661857865498893,
+          "workingSetKiB": 46160
+        },
+        {
+          "type": "Tab",
+          "cpuPercent": 1.8450525729621683,
+          "workingSetKiB": 373504
+        }
+      ]
+    },
+    {
+      "elapsedMs": 75088,
+      "metrics": [
+        {
+          "type": "Browser",
+          "cpuPercent": 0.07150695270213324,
+          "workingSetKiB": 176320
+        },
+        {
+          "type": "GPU",
+          "cpuPercent": 0.22528954814671612,
+          "workingSetKiB": 103392
+        },
+        {
+          "type": "Utility",
+          "cpuPercent": 0.00014229768115693107,
+          "workingSetKiB": 46160
+        },
+        {
+          "type": "Tab",
+          "cpuPercent": 1.9554197075116844,
+          "workingSetKiB": 388048
+        }
+      ]
+    },
+    {
+      "elapsedMs": 80099,
+      "metrics": [
+        {
+          "type": "Browser",
+          "cpuPercent": 0.11107823894582408,
+          "workingSetKiB": 176272
+        },
+        {
+          "type": "GPU",
+          "cpuPercent": 0.24430518645743152,
+          "workingSetKiB": 103456
+        },
+        {
+          "type": "Utility",
+          "cpuPercent": 0.00006609346423929565,
+          "workingSetKiB": 46160
+        },
+        {
+          "type": "Tab",
+          "cpuPercent": 2.167121954937535,
+          "workingSetKiB": 384608
+        }
+      ]
+    },
+    {
+      "elapsedMs": 85120,
+      "metrics": [
+        {
+          "type": "Browser",
+          "cpuPercent": 0.06176177940855701,
+          "workingSetKiB": 176416
+        },
+        {
+          "type": "GPU",
+          "cpuPercent": 0.23926895232608703,
+          "workingSetKiB": 103488
+        },
+        {
+          "type": "Utility",
+          "cpuPercent": 0.000028634996128548524,
+          "workingSetKiB": 46160
+        },
+        {
+          "type": "Tab",
+          "cpuPercent": 2.2872357113830857,
+          "workingSetKiB": 399712
+        }
+      ]
+    },
+    {
+      "elapsedMs": 90136,
+      "metrics": [
+        {
+          "type": "Browser",
+          "cpuPercent": 0.10616868164074182,
+          "workingSetKiB": 176496
+        },
+        {
+          "type": "GPU",
+          "cpuPercent": 0.22957204203619264,
+          "workingSetKiB": 103568
+        },
+        {
+          "type": "Utility",
+          "cpuPercent": 0.00007227201071499847,
+          "workingSetKiB": 46160
+        },
+        {
+          "type": "Tab",
+          "cpuPercent": 2.318644816789918,
+          "workingSetKiB": 410096
+        }
+      ]
+    },
+    {
+      "elapsedMs": 95152,
+      "metrics": [
+        {
+          "type": "Browser",
+          "cpuPercent": 0.08034565600726866,
+          "workingSetKiB": 176496
+        },
+        {
+          "type": "GPU",
+          "cpuPercent": 0.23532501246873844,
+          "workingSetKiB": 103632
+        },
+        {
+          "type": "Utility",
+          "cpuPercent": 0.00006852324288464613,
+          "workingSetKiB": 46160
+        },
+        {
+          "type": "Tab",
+          "cpuPercent": 2.4131945413459612,
+          "workingSetKiB": 425360
+        }
+      ]
+    },
+    {
+      "elapsedMs": 100166,
+      "metrics": [
+        {
+          "type": "Browser",
+          "cpuPercent": 0.09981928500160243,
+          "workingSetKiB": 177168
+        },
+        {
+          "type": "GPU",
+          "cpuPercent": 0.23588303944520528,
+          "workingSetKiB": 103664
+        },
+        {
+          "type": "Utility",
+          "cpuPercent": 0.000059828591086537074,
+          "workingSetKiB": 46160
+        },
+        {
+          "type": "Tab",
+          "cpuPercent": 2.619727706176264,
+          "workingSetKiB": 424656
+        }
+      ]
+    },
+    {
+      "elapsedMs": 105184,
+      "metrics": [
+        {
+          "type": "Browser",
+          "cpuPercent": 0.10319949836802184,
+          "workingSetKiB": 177232
+        },
+        {
+          "type": "GPU",
+          "cpuPercent": 0.24385755703056392,
+          "workingSetKiB": 103744
+        },
+        {
+          "type": "Utility",
+          "cpuPercent": 0.00002242278042875944,
+          "workingSetKiB": 46160
+        },
+        {
+          "type": "Tab",
+          "cpuPercent": 2.694329307596361,
+          "workingSetKiB": 443792
+        }
+      ]
+    },
+    {
+      "elapsedMs": 110205,
+      "metrics": [
+        {
+          "type": "Browser",
+          "cpuPercent": 0.04438841958108802,
+          "workingSetKiB": 176672
+        },
+        {
+          "type": "GPU",
+          "cpuPercent": 0.22906036758787335,
+          "workingSetKiB": 103792
+        },
+        {
+          "type": "Utility",
+          "cpuPercent": 0.0000311155249243818,
+          "workingSetKiB": 46160
+        },
+        {
+          "type": "Tab",
+          "cpuPercent": 2.6230255826420543,
+          "workingSetKiB": 439136
+        }
+      ]
+    },
+    {
+      "elapsedMs": 115210,
+      "metrics": [
+        {
+          "type": "Browser",
+          "cpuPercent": 0.043649193467812646,
+          "workingSetKiB": 177008
+        },
+        {
+          "type": "GPU",
+          "cpuPercent": 0.2272777910328701,
+          "workingSetKiB": 103840
+        },
+        {
+          "type": "Utility",
+          "cpuPercent": 0.000029973844823007445,
+          "workingSetKiB": 46160
+        },
+        {
+          "type": "Tab",
+          "cpuPercent": 2.613894524522282,
+          "workingSetKiB": 436656
+        }
+      ]
+    },
+    {
+      "elapsedMs": 120223,
+      "metrics": [
+        {
+          "type": "Browser",
+          "cpuPercent": 0.04588600147114435,
+          "workingSetKiB": 177088
+        },
+        {
+          "type": "GPU",
+          "cpuPercent": 0.22905853144052477,
+          "workingSetKiB": 103920
+        },
+        {
+          "type": "Utility",
+          "cpuPercent": 0.00011842345915372951,
+          "workingSetKiB": 46160
+        },
+        {
+          "type": "Tab",
+          "cpuPercent": 2.656458830420997,
+          "workingSetKiB": 435984
+        }
+      ]
+    }
+  ]
+}

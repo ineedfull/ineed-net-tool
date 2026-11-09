@@ -1,0 +1,320 @@
+.project-switcher {
+  width: clamp(120px, 18vw, 240px);
+  text-overflow: ellipsis;
+}
+.project-identity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.project-identity > svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.project-identity h2,
+.project-identity p {
+  overflow-wrap: anywhere;
+}
+.project-identity .hint {
+  margin-top: 4px;
+}
+.project-note {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.project-summary .metrics {
+  margin: 18px 0;
+}
+.project-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+.project-tabs button {
+  border-color: transparent;
+  background: transparent;
+}
+.project-tabs button.active {
+  border-color: var(--accent);
+  background: var(--active);
+  color: var(--accent);
+}
+.project-dialog {
+  width: min(820px, calc(100vw - 32px));
+}
+.project-dialog-form {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: end;
+  gap: 16px;
+}
+/* Override compact toolbar numeric widths only inside full-column forms. */
+.field-grid
+  label
+  > :is(input:not([type="checkbox"]):not([type="radio"]), select, textarea) {
+  width: 100%;
+  max-width: 100%;
+}
+.field-grid .full {
+  grid-column: 1 / -1;
+}
+.field-action {
+  align-self: end;
+}
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.scenario-card {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 10px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+}
+.scenario-card input {
+  min-height: 18px;
+  width: 16px;
+  margin: 0;
+  accent-color: var(--accent);
+}
+.scenario-card strong {
+  color: var(--text);
+  font-size: var(--font);
+}
+.scenario-card span {
+  grid-column: 2;
+  font-size: var(--control);
+  line-height: 1.7;
+}
+.scenario-card.selected {
+  border-color: var(--accent);
+  background: var(--active);
+}
+.template-base {
+  margin-top: 16px;
+}
+.ledger-scroll {
+  max-height: 540px;
+}
+.ledger-table {
+  min-width: 900px;
+  table-layout: fixed;
+  /* Sticky cells must paint their own row borders in Chromium. */
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.ledger-table th:nth-child(1) {
+  width: 190px;
+}
+.ledger-table th:nth-child(2) {
+  width: 165px;
+}
+.ledger-table th:nth-child(3) {
+  width: 76px;
+}
+.ledger-table th:nth-child(4) {
+  width: 150px;
+}
+.ledger-table th:nth-child(6) {
+  width: 162px;
+}
+.maintenance-table {
+  table-layout: fixed;
+}
+.maintenance-table th:first-child {
+  width: 120px;
+}
+.maintenance-table th:nth-child(3) {
+  width: 96px;
+}
+.maintenance-table th:nth-child(4) {
+  width: 86px;
+}
+.maintenance-table th:last-child {
+  width: 112px;
+}
+.maintenance-table td:first-child {
+  white-space: nowrap;
+}
+.maintenance-note summary {
+  cursor: pointer;
+  list-style: none;
+}
+.maintenance-note summary::-webkit-details-marker { display: none; }
+.maintenance-note:not([open]) .project-note {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.maintenance-expand,
+.maintenance-collapse {
+  display: block;
+  color: var(--accent);
+  font-size: var(--small);
+  margin-top: 4px;
+}
+.maintenance-note:not([open]) .maintenance-collapse,
+.maintenance-note[open] .maintenance-expand { display: none; }
+.import-errors {
+  line-height: 1.8;
+  padding-left: 22px;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 760px) {
+  .workspace-state {
+    display: flex;
+  }
+  .workspace-state > .badge {
+    display: none;
+  }
+  .project-switcher {
+    width: 140px;
+  }
+}
+@media (max-width: 520px) {
+  .field-grid,
+  .scenario-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.ledger-table :is(th, td):last-child {
+  position: sticky;
+  right: 0;
+  background: var(--surface);
+}
+.ledger-table td:last-child {
+  z-index: 1;
+}
+.ledger-table tbody tr:hover > td:last-child {
+  background: var(--hover);
+}
+.ledger-table tbody tr.selected > td:last-child {
+  background: var(--active);
+}
+.ledger-table th:last-child {
+  z-index: 2;
+  background: var(--bg);
+}
+
+.network-topology {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+  gap: 6px;
+  margin: 20px 0;
+}
+.network-topology > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: min(100%, 620px);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px 16px;
+  text-align: center;
+  background: var(--bg);
+}
+.network-topology .boundary {
+  border-color: var(--accent);
+  background: var(--active);
+}
+.network-topology span {
+  color: var(--muted);
+  font-size: var(--control);
+}
+.uplink-table {
+  min-width: 720px;
+}
+.policy-table {
+  min-width: 950px;
+}
+.policy-table td:first-child {
+  min-width: 230px;
+  max-width: 320px;
+  overflow-wrap: anywhere;
+}
+.connectivity-actions-cell {
+  position: sticky;
+  right: 0;
+  width: 1%;
+  white-space: nowrap;
+  padding-inline: 12px;
+  box-shadow: -1px 0 var(--line-soft);
+}
+td.connectivity-actions-cell {
+  z-index: 1;
+  background: var(--surface);
+}
+th.connectivity-actions-cell {
+  z-index: 3;
+  background: var(--bg);
+}
+:is(.uplink-table, .policy-table) tbody tr:hover > .connectivity-actions-cell {
+  background: var(--hover);
+}
+.connectivity-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  vertical-align: middle;
+}
+.connectivity-actions button {
+  min-height: 28px;
+  padding: 3px 7px;
+}
+.rule-order-actions {
+  display: inline-flex;
+}
+.rule-order-actions button:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.rule-order-actions button:last-child {
+  margin-left: -1px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.rule-order-actions button,
+.connectivity-actions .rule-delete {
+  width: 28px;
+  padding-inline: 0;
+}
+.connectivity-actions .rule-delete {
+  color: var(--muted);
+}
+.connectivity-actions .rule-delete:hover:not(:disabled) {
+  color: var(--error);
+  border-color: var(--error);
+  background: var(--error-soft);
+}
+@media (min-width: 1200px) {
+  .network-topology {
+    grid-template-columns:
+      minmax(0, 1fr) 16px minmax(0, 1fr) 16px minmax(0, 1fr)
+      16px minmax(0, 1fr) 16px minmax(0, 1fr);
+    align-items: stretch;
+  }
+  .network-topology > div {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 8px;
+  }
+  .network-topology .topology-arrow {
+    align-self: center;
+    transform: rotate(-90deg);
+  }
+}

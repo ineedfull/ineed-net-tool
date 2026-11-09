@@ -1,0 +1,168 @@
+{
+  "testedAt": "2026-10-12T13:04:51.957Z",
+  "platform": "darwin/arm64",
+  "baseCommit": "39dec2e7c02aa410d87a39c99d6b31fbae1b4296",
+  "productChanges": false,
+  "soak": {
+    "durationMs": 1200336,
+    "cycles": 240,
+    "taskCount": 1441,
+    "rows": 462679,
+    "bytes": 339279872,
+    "saves": 2160,
+    "completed": 1244,
+    "stopped": 71,
+    "expectedErrors": 126,
+    "unexpectedErrors": 0,
+    "ping": {
+      "sent": 5648,
+      "received": 5648,
+      "retainedRows": 500,
+      "retainedLogs": 500
+    },
+    "sampleCount": 94,
+    "rejectedAttacks": 13,
+    "pageErrors": [],
+    "finalNativeHandles": {
+      "Socket": 1
+    },
+    "finalRemoteSockets": [],
+    "originalDriverExitCode": 13,
+    "originalDriverExitReason": "paused TCP test fixture reader retained TLS ClientHello; cleanup top-level await unsettled after all product assertions",
+    "restartVerification": {
+      "testedAt": "2026-10-12T13:31:08.992Z",
+      "passed": true,
+      "preservedHistory": 100,
+      "restartPreserved": true,
+      "beforeRestartExactMatch": true,
+      "mainHandles": []
+    },
+    "memory": {
+      "Browser": {
+        "firstMiB": 206.328125,
+        "finalMiB": 316.265625,
+        "peakMiB": 384.46875,
+        "afterFiveMinutesMinMiB": 307.296875,
+        "afterFiveMinutesMaxMiB": 383.15625,
+        "afterFiveMinutesSlopeMiBPerMinute": -4.013201365177084
+      },
+      "Tab": {
+        "firstMiB": 196.21875,
+        "finalMiB": 888.75,
+        "peakMiB": 1011.28125,
+        "afterFiveMinutesMinMiB": 728.15625,
+        "afterFiveMinutesMaxMiB": 1011.28125,
+        "afterFiveMinutesSlopeMiBPerMinute": -3.937496203523956
+      }
+    },
+    "evidence": "/tmp/nettool-soak-ZQpxey/report.json",
+    "restartEvidence": "/tmp/nettool-soak-ZQpxey/recovery.json"
+  },
+  "hostile": {
+    "passed": true,
+    "cases": 60,
+    "uiDownloadRestarts": 40,
+    "sameKindRace": {
+      "accepted": 1,
+      "rejected": 31
+    },
+    "cleanup": {
+      "name": "cleanup",
+      "fixtureOpenSockets": 0,
+      "mainHandles": [
+        "Socket"
+      ],
+      "rendererErrors": []
+    },
+    "evidence": "/tmp/nettool-hostile-dOjyMj/report.json"
+  },
+  "boundaries": {
+    "folder": "/tmp/nettool-boundaries-vGXADX",
+    "testedAt": "2026-10-12T13:13:55.600Z",
+    "cases": [
+      {
+        "kind": "scan",
+        "completed": 65534,
+        "elapsedMs": 53246,
+        "retained": 65534,
+        "exported": 65534,
+        "nativeMethod": "TCP",
+        "concurrency": 128,
+        "pauseResume": true
+      },
+      {
+        "kind": "ports",
+        "completed": 65535,
+        "elapsedMs": 2012,
+        "retained": 65535,
+        "concurrency": 128,
+        "summary": {
+          "open": 53,
+          "closed": 65482,
+          "timeout": 0,
+          "error": 0
+        }
+      }
+    ],
+    "errors": [],
+    "beforeRestart": [
+      {
+        "id": "a8be0d40-ac48-419f-9304-0f1c9dc0b919",
+        "kind": "ports",
+        "rows": 65535
+      },
+      {
+        "id": "fe32298d-3a38-490f-a228-e4fb49dc777f",
+        "kind": "scan",
+        "rows": 65534
+      }
+    ],
+    "restartPreserved": true,
+    "handles": [],
+    "passed": true
+  },
+  "verification": {
+    "unit": {
+      "passed": 92,
+      "failed": 0,
+      "log": "/tmp/nettool-soak-unit.log"
+    },
+    "targetedElectronUi": {
+      "passed": 6,
+      "failed": 0,
+      "log": "/tmp/nettool-soak-ui.log"
+    },
+    "productionBuild": true,
+    "fixtureRegression": {
+      "redExitCode": 1,
+      "greenExitCode": 0,
+      "redLog": "/tmp/nettool-fixture-red.log",
+      "greenLog": "/tmp/nettool-fixture-green.log"
+    },
+    "fixtureShortRerun": {
+      "durationMs": 50098,
+      "minutes": 0.8,
+      "passed": true,
+      "fixtureClosed": true,
+      "restartPreserved": true,
+      "retainedHistory": 61,
+      "totals": {
+        "rows": 19763,
+        "bytes": 14155776,
+        "saves": 90,
+        "completed": 53,
+        "stopped": 3,
+        "expectedErrors": 5,
+        "unexpectedErrors": 0
+      },
+      "evidence": "/tmp/nettool-soak-4oLkYU/report.json"
+    }
+  },
+  "limitations": [
+    "macOS arm64 Electron only",
+    "loopback native traffic only",
+    "soak repeated multi-tool starts use real preload APIs; continuous Ping starts through visible UI",
+    "concurrent local validation changes resource and throughput measurements",
+    "20 minutes and memory plateau do not prove absence of long-term leaks"
+  ]
+}

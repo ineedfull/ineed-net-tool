@@ -1,0 +1,50 @@
+export const project = () => ({ id: "p", name: "现场" });
+export const item = (extra = {}) => ({
+  id: "check",
+  name: "连通",
+  targetType: "project",
+  targetId: "",
+  method: "manual",
+  expected: "符合设计",
+  owner: "甲",
+  note: "",
+  ...extra,
+});
+export const result = (extra = {}) => ({
+  id: "r1",
+  itemId: "check",
+  measuredAt: "2026-10-27T00:00:00.000Z",
+  operator: "甲",
+  outcome: "failed",
+  actual: "未达标",
+  note: "",
+  ...extra,
+});
+export const action = (extra = {}) => ({
+  id: "a1",
+  itemId: "check",
+  failedResultId: "r1",
+  description: "修复",
+  owner: "乙",
+  dueDate: "2026-10-28",
+  note: "",
+  ...extra,
+});
+export const history = (extra = {}) => ({
+  id: "h",
+  projectId: "p",
+  kind: "ping",
+  target: "127.0.0.1",
+  status: "completed",
+  startedAt: "2026-10-27T00:00:00.000Z",
+  finishedAt: "2026-10-27T00:00:01.000Z",
+  completed: 1,
+  received: 1,
+  min: 0,
+  max: 0,
+  average: 0,
+  options: { count: 1, interval: 1000, payloadSize: 56 },
+  rows: [{ secret: "excluded" }],
+  raw: "excluded",
+  ...extra,
+});

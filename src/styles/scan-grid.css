@@ -1,0 +1,227 @@
+.scan-view-toggle {
+  display: flex;
+  padding: 2px;
+  gap: 2px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+}
+.scan-view-toggle button {
+  border-color: transparent;
+  background: transparent;
+  min-height: 28px;
+  padding: 3px 9px;
+  color: var(--muted);
+}
+.scan-view-toggle button[aria-pressed="true"] {
+  background: var(--surface);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.scan-grid-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 14px 0 10px;
+}
+.scan-grid-toolbar .muted {
+  font-size: var(--small);
+}
+.scan-block-label {
+  flex-direction: row;
+  align-items: center;
+}
+.scan-grid-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  margin-bottom: 14px;
+  font-size: var(--small);
+}
+.scan-grid-legend > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.scan-address-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  gap: 6px;
+}
+.scan-address-cell {
+  position: relative;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 50px;
+  padding: 6px 4px 5px;
+  gap: 5px;
+  border-color: var(--line-soft);
+  background: var(--surface-control);
+}
+.scan-address-cell .mono {
+  font-size: var(--control);
+  line-height: 1.25;
+}
+.scan-address-cell.scan-state-reachable {
+  background: var(--success-soft);
+}
+.scan-address-cell.scan-state-error {
+  background: var(--error-soft);
+}
+.scan-address-cell.scan-state-pending {
+  border-style: dashed;
+}
+.scan-address-cell.is-selected {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+.scan-address-cell:hover {
+  background: var(--hover);
+}
+.scan-status-mark {
+  position: absolute;
+  top: 6px;
+  right: 4px;
+}
+.scan-local-mark {
+  position: absolute;
+  top: 0;
+  left: 3px;
+  font-size: 10px;
+  color: var(--accent);
+}
+.scan-address-cell.is-local {
+  border-color: var(--accent);
+}
+.scan-state-reachable {
+  color: var(--success);
+}
+.scan-state-no-response,
+.scan-state-untested,
+.scan-state-unfinished {
+  color: var(--muted);
+}
+.scan-state-error {
+  color: var(--error);
+}
+.scan-state-pending,
+.scan-local-legend {
+  color: var(--accent);
+}
+.scan-address-cell.scan-state-unfinished .scan-device-icon,
+.scan-address-cell.scan-state-untested .scan-device-icon {
+  stroke-dasharray: 3 2;
+}
+.scan-address-detail {
+  margin-top: 16px;
+  padding: 12px;
+  background: var(--surface-control);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+}
+.scan-address-detail > div:first-child {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+.scan-address-detail p {
+  margin: 8px 0;
+  overflow-wrap: anywhere;
+  color: var(--muted);
+}
+.large-font .scan-address-grid {
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  gap: 8px;
+}
+.large-font .scan-address-cell {
+  min-height: 60px;
+}
+.large-font .scan-address-cell .mono {
+  font-size: var(--code);
+}
+
+.scan-state-assigned {
+  color: var(--accent);
+}
+.scan-address-cell.scan-state-assigned {
+  background: var(--active);
+}
+.scan-state-available {
+  color: var(--muted);
+}
+.scan-address-cell.scan-state-available .scan-device-icon {
+  opacity: 0.6;
+}
+.scan-state-reserved,
+.scan-state-unregistered {
+  color: var(--warn);
+}
+.scan-state-maintenance {
+  color: var(--error);
+}
+.scan-address-cell.scan-state-maintenance {
+  background: var(--error-soft);
+}
+.scan-state-gateway {
+  color: var(--accent);
+}
+.scan-address-cell.scan-state-gateway {
+  border-color: var(--accent);
+}
+.scan-state-dhcp {
+  color: var(--muted);
+}
+.scan-address-cell.scan-state-dhcp {
+  background: var(--bg);
+  border-style: dashed;
+}
+.scan-state-excluded {
+  color: var(--muted);
+}
+.scan-address-cell.scan-state-excluded .scan-device-icon {
+  opacity: 0.4;
+}
+.ip-observation-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  bottom: 4px;
+  right: 4px;
+  background: var(--muted);
+}
+.ip-observation-dot.observed-reachable {
+  background: var(--success);
+}
+.ip-observation-dot.observed-error {
+  background: var(--error);
+}
+.allocation-legend i {
+  width: 7px;
+  height: 7px;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+}
+.allocation-legend
+  :is(.scan-state-assigned, .scan-state-gateway, .scan-state-maintenance)
+  i {
+  background: currentColor;
+}
+.map-count {
+  margin: 0 0 12px;
+}
+.allocation-map .scan-block-label input {
+  width: 90px;
+}
+
+.scan-device-icon {
+  width: 19px;
+  height: 19px;
+}
+.large-font .scan-device-icon {
+  width: 21px;
+  height: 21px;
+}

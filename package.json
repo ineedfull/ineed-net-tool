@@ -1,0 +1,96 @@
+{
+  "name": "ineed-net-tool",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "private": true,
+  "type": "module",
+  "description": "IPv4 planning and network diagnostics desktop workbench",
+  "homepage": "https://nettool.ineedfull.com/",
+  "author": "iNeed",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "start": "npm run build && node scripts/dev-electron.mjs",
+    "test": "node --test tests/*.test.js scripts/*.test.mjs",
+    "test:ui": "playwright test",
+    "package:mac": "npm run package:desktop:mac",
+    "package:mac:dir": "npm run build && electron-builder --dir --mac --arm64 -c.mac.identity=null",
+    "release:plan": "node scripts/desktop-release.mjs plan",
+    "release:build": "node scripts/desktop-release.mjs build",
+    "release:verify": "node scripts/desktop-release.mjs verify",
+    "release:upload": "node scripts/release-upload.mjs",
+    "test:release": "node --test scripts/desktop-release.test.mjs scripts/release-upload.test.mjs",
+    "package:win": "node scripts/desktop-release.mjs build --platform=windows --arch=x64",
+    "package:linux": "node scripts/desktop-release.mjs build --platform=linux --arch=x64",
+    "package:desktop:mac": "node scripts/desktop-release.mjs build --platform=macos --arch=all"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0",
+    "lucide-vue-next": "0.468.0",
+    "vue": "3.5.40"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.58.2",
+    "@vitejs/plugin-vue": "6.0.6",
+    "electron": "43.1.0",
+    "electron-builder": "26.15.3",
+    "vite": "8.1.5"
+  },
+  "build": {
+    "appId": "com.ineedfull.net-tool",
+    "productName": "Ineed Net Tool",
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "src/domain/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "icon": "build/icon.icns",
+      "target": "dmg",
+      "identity": null,
+      "artifactName": "${productName}-${version}-macos-${arch}.${ext}",
+      "extendInfo": {
+        "CFBundleName": "iNeed Net Tool",
+        "CFBundleDisplayName": "iNeed Net Tool"
+      }
+    },
+    "win": {
+      "icon": "build/icon.ico",
+      "target": "nsis",
+      "artifactName": "${productName}-${version}-windows-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "deleteAppDataOnUninstall": false,
+      "installerLanguages": [
+        "zh_CN",
+        "en_US"
+      ],
+      "displayLanguageSelector": true,
+      "artifactName": "${productName}-${version}-windows-${arch}-setup.${ext}"
+    },
+    "linux": {
+      "icon": "build/icon.png",
+      "target": [
+        "deb",
+        "AppImage"
+      ],
+      "artifactName": "${productName}-${version}-linux-${arch}.${ext}",
+      "category": "Development",
+      "maintainer": "Ineed",
+      "vendor": "Ineed",
+      "executableName": "ineed-net-tool"
+    }
+  }
+}

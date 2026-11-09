@@ -1,0 +1,93 @@
+[
+  {
+    "file": "planning.webp",
+    "sourceRepository": "ineed-nettool-website",
+    "sourcePath": "public/images/app/2026-11-02/planning.webp",
+    "capturedAt": "2026-11-02",
+    "runtime": "Electron 原生开发宿主",
+    "productVersion": "0.1.0",
+    "data": "隔离演示数据；原生宿主截图不代表所有平台或安装包验收",
+    "transformation": "原文件复制，未修改像素",
+    "width": 2960,
+    "height": 1936,
+    "sha256": "0afefebd48465572fde0faa00eaa9e0324207593c24d3fd25a6b1720c2a78f42"
+  },
+  {
+    "file": "ledger.webp",
+    "sourceRepository": "ineed-nettool-website",
+    "sourcePath": "public/images/app/2026-11-02/ledger.webp",
+    "capturedAt": "2026-11-02",
+    "runtime": "Electron 原生开发宿主",
+    "productVersion": "0.1.0",
+    "data": "隔离演示数据；原生宿主截图不代表所有平台或安装包验收",
+    "transformation": "原文件复制，未修改像素",
+    "width": 2960,
+    "height": 1936,
+    "sha256": "ceb348db476490e5c10a6e83e1004ca4f52fbeabcac8a1e804e85249205cc5bc"
+  },
+  {
+    "file": "engineering-topology.webp",
+    "sourceRepository": "ineed-nettool-website",
+    "sourcePath": "public/images/app/2026-11-01/engineering-topology.webp",
+    "capturedAt": "2026-11-01",
+    "runtime": "Electron 原生开发宿主",
+    "productVersion": "0.1.0",
+    "data": "隔离演示数据；原生宿主截图不代表所有平台或安装包验收",
+    "transformation": "原文件复制，未修改像素",
+    "width": 2880,
+    "height": 1736,
+    "sha256": "1972063e214b44963fdae0e576868806fba9c3339564485821fb84cef7afbad6"
+  },
+  {
+    "file": "logical-config.webp",
+    "sourceRepository": "ineed-nettool-website",
+    "sourcePath": "public/images/app/2026-11-01/logical-config.webp",
+    "capturedAt": "2026-11-01",
+    "runtime": "Electron 原生开发宿主",
+    "productVersion": "0.1.0",
+    "data": "隔离演示数据；原生宿主截图不代表所有平台或安装包验收",
+    "transformation": "原文件复制，未修改像素",
+    "width": 2880,
+    "height": 1736,
+    "sha256": "7e4ef97e442dff6a24063e5db8ed8d2d96598581b3f31d3183221dd68e09a5b4"
+  },
+  {
+    "file": "enterprise.webp",
+    "sourceRepository": "ineed-nettool-website",
+    "sourcePath": "public/images/app/2026-11-02/enterprise.webp",
+    "capturedAt": "2026-11-02",
+    "runtime": "Electron 原生开发宿主",
+    "productVersion": "0.1.0",
+    "data": "隔离演示数据；原生宿主截图不代表所有平台或安装包验收",
+    "transformation": "原文件复制，未修改像素",
+    "width": 2960,
+    "height": 1936,
+    "sha256": "9e823b4e9d88ea40f2aace8d0f485a877bb2850015636e2af5d1ed0cab398163"
+  },
+  {
+    "file": "ping.webp",
+    "sourceRepository": "ineed-nettool-website",
+    "sourcePath": "public/images/app/2026-11-02/ping.webp",
+    "capturedAt": "2026-11-02",
+    "runtime": "Electron 原生开发宿主",
+    "productVersion": "0.1.0",
+    "data": "隔离演示数据；原生宿主截图不代表所有平台或安装包验收",
+    "transformation": "原文件复制，未修改像素",
+    "width": 2960,
+    "height": 1936,
+    "sha256": "02250f08f387445c9fd9d7d3047676c20221c7f321d04a4bcb5a921e00ce70bd"
+  },
+  {
+    "file": "wechat-qr.png",
+    "sourceRepository": "ineed-mqtt-website",
+    "sourcePath": "public/images/wechat-qr.png",
+    "purpose": "扫码加微信，非公众号二维码",
+    "sha256": "e28ce35e9bd504f878ed7f17d4b5acbf2da817e24a3fe9eb9bacac78a5fccfd0",
+    "transformation": "原文件复制，未缩小或重绘"
+  },
+  {
+    "file": "logo.svg",
+    "source": "本产品现用 SVG 品牌副本",
+    "sha256": "72fab30d4fcd0fcb3b9f331f12f0233deda01d0d5648879807b0a72476d6f784"
+  }
+]

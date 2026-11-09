@@ -1,0 +1,60 @@
+/* Match MQTT Tool and LinkLab desktop.css / typography.css semantic roles. */
+.net-app {
+  --bg: #f1f4f9;
+  --surface: #fff;
+  --surface-control: #f6f8fc;
+  --border: #c7d2e3;
+  --line-soft: #d5deeb;
+  --text: #233047;
+  --muted: #536176;
+  --hover: #eef2fb;
+  --active: #e7edff;
+  --accent: #3159da;
+  --on-accent: #fff;
+  --success: #147650;
+  --success-soft: #e6f5ed;
+  --warn: #855600;
+  --error: #b42332;
+  --error-soft: #fff0f1;
+  --font: 13px;
+  --small: 11px;
+  --control: 12px;
+  --heading: 14px;
+  --title: 15px;
+  --display: 20px;
+  --code: 13px;
+  --sidebar-width: 240px;
+  --sidebar-collapsed-width: 58px;
+  --header-height: 48px;
+  --control-height: 32px;
+  --row-height: 40px;
+  color-scheme: light;
+}
+.net-app[data-theme="dark"] {
+  --bg: #182231;
+  --surface: #1e2838;
+  --surface-control: #263247;
+  --border: #465873;
+  --line-soft: #36445a;
+  --text: #e1e8f5;
+  --muted: #afbdd2;
+  --hover: #29364d;
+  --active: #293e67;
+  --accent: #94b4ff;
+  --on-accent: #16233d;
+  --success: #83d9b1;
+  --success-soft: #203e35;
+  --warn: #f3cf86;
+  --error: #ffabb3;
+  --error-soft: #482c38;
+  color-scheme: dark;
+}
+.net-app.large-font {
+  --font: 14px;
+  --small: 12px;
+  --control: 13px;
+  --heading: 15px;
+  --title: 16px;
+  --display: 21px;
+  --code: 16px;
+}

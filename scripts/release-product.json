@@ -1,0 +1,10 @@
+{
+  "product": "Ineed Net Tool",
+  "slug": "ineed-net-tool",
+  "identifiers": {
+    "electron": "com.ineedfull.net-tool"
+  },
+  "runtimeDirectories": {
+    "electron": "."
+  }
+}

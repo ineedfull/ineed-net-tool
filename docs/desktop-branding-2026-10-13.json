@@ -1,0 +1,69 @@
+{
+  "testedAt": "2026-10-13",
+  "platform": "macOS arm64",
+  "status": "verified locally, not committed or released",
+  "electronRed": {
+    "bundle": "/Users/pangzhigang/develop/com.ineedfull/ineed-net-tool/node_modules/electron/dist/Electron.app",
+    "pid": 48025,
+    "expected": "iNeed Net Tool",
+    "name": "Electron",
+    "menus": [
+      "Apple",
+      "Electron",
+      "编辑",
+      "视图"
+    ],
+    "passed": false,
+    "windowTitles": [
+      "Electron"
+    ],
+    "runtime": {
+      "internalName": "Ineed Net Tool",
+      "userData": "/tmp/nettool-brand-red-vYKKz0",
+      "visible": true,
+      "title": "iNeed Net Tool"
+    },
+    "errors": []
+  },
+  "electronGreen": {
+    "passed": true,
+    "name": "iNeed Net Tool",
+    "menus": [
+      "Apple",
+      "iNeed Net Tool",
+      "编辑",
+      "视图"
+    ],
+    "bundle": "/Users/pangzhigang/develop/com.ineedfull/ineed-net-tool/artifacts/electron-dev/43.1.0-arm64-bc086631a518/iNeed Net Tool.app",
+    "expected": "iNeed Net Tool",
+    "windowTitles": [
+      "iNeed Net Tool"
+    ],
+    "pid": 48140,
+    "runtime": {
+      "internalName": "Ineed Net Tool",
+      "userData": "/tmp/nettool-brand-green-XlRekK",
+      "visible": true,
+      "title": "iNeed Net Tool"
+    },
+    "errors": [],
+    "iconSha256": "5aa4cb94bd7677775fb1151f0f8f26ea002737806aac4f4fa1eabb90a7e2c8e6"
+  },
+  "limitations": [
+    "Production installation and signing not revalidated",
+    "Other operating systems not revalidated",
+    "This branding task does not replace prolonged soak or MQTT memory investigation"
+  ],
+  "checks": {
+    "node": {
+      "passed": 110,
+      "skipped": 1,
+      "failed": 0
+    },
+    "nativeUi": {
+      "passed": 2,
+      "failed": 0
+    },
+    "loopbackBoundary": "65534 scan rows / 65535 port rows, export and restart recovery passed"
+  }
+}
