@@ -18,6 +18,7 @@ test("site acceptance native lifecycle and display matrix", async ({}, testInfo)
   const folder = await fs.mkdtemp(
     path.join(os.tmpdir(), "nettool-acceptance-ui-"),
   );
+  const exports = await fs.mkdtemp(path.join(os.tmpdir(), "nettool-acceptance-exports-"));
   const server = net.createServer((socket) => socket.end());
   await new Promise((resolve) => server.listen(0, "127.0.0.1", resolve));
   const state = emptyWorkspace();
@@ -322,7 +323,7 @@ test("site acceptance native lifecycle and display matrix", async ({}, testInfo)
     await tab("现场验收").click();
     // Actual 25-sheet file roundtrip: dialogs are redirected, XLSX bytes are real.
     const original = await current(),
-      file = path.join(folder, "acceptance.xlsx");
+      file = path.join(exports, "acceptance.xlsx");
     await app.evaluate(({ dialog }, file) => {
       dialog.showSaveDialog = async () => ({ canceled: false, filePath: file });
     }, file);
@@ -559,5 +560,6 @@ test("site acceptance native lifecycle and display matrix", async ({}, testInfo)
     if (app) await app.close();
     await new Promise((resolve) => server.close(resolve));
     await fs.rm(folder, { recursive: true, force: true });
+    await fs.rm(exports, { recursive: true, force: true });
   }
 });

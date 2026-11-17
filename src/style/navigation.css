@@ -1,0 +1,217 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  border-right: 1px solid var(--border);
+  background: var(--bg);
+}
+.brand {
+  height: var(--header-height);
+  min-height: var(--header-height);
+  padding: 0 9px 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border-bottom: 1px solid var(--border);
+}
+.brand-identity {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  gap: 8px;
+}
+.brand img {
+  display: block;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+.brand strong {
+  font-size: var(--heading);
+  font-weight: 700;
+  white-space: nowrap;
+}
+.icon-button {
+  width: 28px;
+  height: 28px;
+  min-height: 28px;
+  padding: 4px;
+  border-color: transparent;
+  background: transparent;
+  color: var(--muted);
+}
+.icon-button:hover {
+  background: var(--hover);
+  border-color: transparent;
+}
+.sidebar-content {
+  flex: 1;
+  overflow: auto;
+  min-height: 0;
+}
+.sidebar nav {
+  padding: 0 8px 12px;
+}
+.nav-heading {
+  display: flex;
+  align-items: center;
+  height: 38px;
+  font-size: var(--small);
+  color: var(--muted);
+  font-weight: 600;
+  padding: 4px;
+}
+.nav-item {
+  justify-content: flex-start;
+  width: 100%;
+  gap: 10px;
+  margin: 2px 0;
+  padding: 8px;
+  min-height: var(--row-height);
+  border-color: transparent;
+  background: transparent;
+  font-size: var(--font);
+  color: var(--text);
+}
+.nav-item:hover {
+  border-color: transparent;
+}
+.nav-item > svg {
+  color: var(--muted);
+}
+.nav-item.active {
+  color: var(--accent);
+  background: var(--active);
+  border-color: var(--accent);
+  font-weight: 600;
+}
+.nav-item.active > svg {
+  color: var(--accent);
+}
+.nav-item span {
+  flex: 1;
+  text-align: left;
+}
+.nav-divider {
+  height: 1px;
+  background: var(--line-soft);
+  margin: 10px 4px;
+}
+.running-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--success);
+  flex-shrink: 0;
+}
+.local-networks {
+  border-top: 1px solid var(--border);
+  margin: 0 8px;
+  padding-top: 4px;
+}
+.local-networks .section-heading {
+  margin-bottom: 2px;
+  gap: 4px;
+}
+.local-networks > p {
+  padding: 8px 4px;
+  font-size: var(--small);
+}
+.interface-card {
+  display: flex;
+  align-items: stretch;
+  text-align: left;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  gap: 4px;
+  padding: 8px;
+  margin-bottom: 4px;
+  background: transparent;
+  border-color: transparent;
+}
+.interface-card strong {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  overflow-wrap: anywhere;
+}
+.interface-card code,
+.interface-card small {
+  color: var(--muted);
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+.interface-card small {
+  font-size: var(--small);
+}
+.sidebar-footer {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 0 8px;
+  border-top: 1px solid var(--border);
+}
+.sidebar-footer .icon-button {
+  width: auto;
+  gap: 5px;
+  padding: 4px 8px;
+}
+.collapsed .brand {
+  height: 64px;
+  min-height: 64px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2px;
+  gap: 1px;
+}
+.collapsed .brand img {
+  width: 24px;
+  height: 24px;
+}
+.collapsed .sidebar nav {
+  padding: 8px 6px;
+}
+.collapsed .sidebar-footer {
+  min-height: 78px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4px;
+  gap: 4px;
+}
+.collapsed .sidebar-footer .icon-button {
+  width: 28px;
+  padding: 4px;
+}
+.collapsed .nav-item {
+  justify-content: center;
+  padding: 8px 4px;
+  position: relative;
+}
+.collapsed .nav-item .running-dot {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+}
+.main-area {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+}
+.topbar {
+  height: var(--header-height);
+  min-height: var(--header-height);
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}

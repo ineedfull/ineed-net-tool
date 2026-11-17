@@ -10,6 +10,9 @@ const {
 const path = require("node:path");
 const { pathToFileURL } = require("node:url");
 const fs = require("node:fs/promises");
+const { finished } = require("node:stream/promises");
+const { Writable } = require("node:stream");
+const { createSafeExportWriter } = require("./safe-export.cjs");
 const { Store } = require("./store.cjs");
 const { NetworkTasks, interfaces } = require("./network.cjs");
 const FILE_LIMIT_BYTES = 128 * 1024 * 1024;
@@ -52,6 +55,7 @@ else {
           return state;
         }),
     );
+    const writeExport = createSafeExportWriter({ protectedDirectories: [app.getPath("userData")] });
     const source = pathToFileURL(
       path.join(__dirname, "../dist/index.html"),
     ).href;
@@ -117,16 +121,24 @@ else {
         defaultPath: filename,
         filters: [{ name: "Excel 工作簿", extensions: ["xlsx"] }],
       });
-      if (chosen.canceled) return false;
-      if (mode === "template")
-        await (await templateWorkbook()).xlsx.writeFile(chosen.filePath);
-      else {
-        const workbook = await projectWorkbook(
-          snapshot.project,
-          snapshot.networks,
-        );
-        await workbook.xlsx.writeFile(chosen.filePath);
-      }
+      if (chosen.canceled || !chosen.filePath) return false;
+      await writeExport(chosen.filePath, async (handle) => {
+        const workbook = mode === "template"
+          ? await templateWorkbook()
+          : await projectWorkbook(snapshot.project, snapshot.networks);
+        const stream = new Writable({
+          write(chunk, _encoding, callback) {
+            handle.writeFile(chunk).then(() => callback(), callback);
+          },
+        });
+        // Observe stream errors while Excel is still producing ZIP entries.
+        const completion = finished(stream, { cleanup: true });
+        try {
+          await Promise.all([workbook.xlsx.write(stream), completion]);
+        } finally {
+          stream.destroy();
+        }
+      });
       return true;
     });
     handle("excel:import", async () => {
@@ -159,8 +171,8 @@ else {
           ? [{ name: "文本日志", extensions: ["txt"] }]
           : [{ name: "JSON", extensions: ["json"] }],
       });
-      if (chosen.canceled) return false;
-      await fs.writeFile(chosen.filePath, content, "utf8");
+      if (chosen.canceled || !chosen.filePath) return false;
+      await writeExport(chosen.filePath, content);
       return true;
     });
     handle("file:import", async () => {

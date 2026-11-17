@@ -1,0 +1,191 @@
+.table-wrap {
+  overflow: auto;
+  max-width: 100%;
+  margin-top: 12px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: var(--control);
+}
+th {
+  background: var(--bg);
+  color: var(--muted);
+  font-weight: 550;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  white-space: nowrap;
+}
+td {
+  font-size: var(--font);
+  height: var(--row-height);
+  border-bottom: 1px solid var(--line-soft);
+  padding: 8px 10px;
+  overflow-wrap: anywhere;
+  line-height: 1.6;
+}
+tr:last-child td {
+  border-bottom: 0;
+}
+tr:hover td {
+  background: var(--hover);
+}
+tr.selected td {
+  background: var(--active);
+}
+.operation-col {
+  width: 150px;
+  min-width: 150px;
+}
+td .actions {
+  flex-wrap: nowrap;
+  gap: 5px;
+}
+td .actions button {
+  min-height: 28px;
+  padding: 3px 7px;
+}
+.text-button {
+  padding: 0;
+  min-height: 24px;
+  border: 0;
+  background: transparent;
+  color: var(--accent);
+  white-space: normal;
+  text-align: left;
+  justify-content: flex-start;
+}
+.subtle-action {
+  margin-top: 12px;
+}
+.result-scroll {
+  max-height: 420px;
+}
+.scan-progress {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 16px;
+  color: var(--muted);
+  font-size: var(--control);
+  font-variant-numeric: tabular-nums;
+}
+.scan-progress progress {
+  flex: 1;
+  min-width: 120px;
+  height: 8px;
+  accent-color: var(--accent);
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg);
+  color: var(--muted);
+  padding: 3px 7px;
+  font-size: var(--small);
+  white-space: nowrap;
+}
+.badge.blue {
+  background: var(--active);
+  color: var(--accent);
+}
+.badge.green {
+  background: var(--success-soft);
+  color: var(--success);
+}
+.badge.red {
+  background: var(--error-soft);
+  color: var(--error);
+}
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 140px;
+  padding: 26px 12px;
+  text-align: center;
+  color: var(--muted);
+}
+.empty strong {
+  color: var(--text);
+  font-weight: 550;
+}
+.empty p {
+  font-size: var(--control);
+}
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  background: var(--active);
+  color: var(--accent);
+  border-radius: 5px;
+  padding: 10px 12px;
+  margin: 12px;
+  line-height: 1.6;
+  font-size: var(--control);
+  overflow-wrap: anywhere;
+}
+.banner.error {
+  background: var(--error-soft);
+  color: var(--error);
+}
+.banner.success {
+  background: var(--success-soft);
+  color: var(--success);
+}
+.banner button {
+  background: transparent;
+  color: inherit;
+  border: 0;
+}
+.hint {
+  font-size: var(--small);
+  margin-top: 12px;
+}
+.latency-chart {
+  display: block;
+  width: 100%;
+  height: 145px;
+}
+.chart-grid {
+  fill: none;
+  stroke: var(--border);
+  stroke-dasharray: 4 4;
+}
+.chart-line {
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+.chart-dot {
+  fill: var(--accent);
+}
+.chart-loss {
+  fill: var(--error);
+}
+.latency-chart text {
+  font-size: var(--small);
+  fill: var(--muted);
+}
+.raw-output {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-height: 250px;
+  overflow: auto;
+  color: var(--text);
+  font-size: var(--code);
+}
+summary {
+  cursor: pointer;
+  font-weight: 550;
+}

@@ -1,0 +1,117 @@
+.status-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 28px;
+  align-items: center;
+  padding: 4px 16px;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--muted);
+  font-size: var(--small);
+}
+.status-footer > span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(128 128 128 / 30%);
+  border-radius: 3px;
+}
+@media (max-width: 1100px) {
+  .workspace-toolbar > div:first-child {
+    flex: 1 1 280px;
+  }
+  .form-row {
+    gap: 10px;
+  }
+  .metrics > div {
+    padding: 0 10px;
+  }
+  .workspace-state > .muted {
+    display: none;
+  }
+}
+@media (max-width: 760px) {
+  .net-app {
+    --sidebar-width: 58px;
+  }
+  .brand strong,
+  .sidebar .nav-heading,
+  .nav-item > span,
+  .nav-item > small,
+  .local-networks,
+  .sidebar-footer span {
+    display: none;
+  }
+  .brand {
+    flex-direction: column;
+    justify-content: center;
+    height: 64px;
+    min-height: 64px;
+    padding: 2px;
+    gap: 1px;
+  }
+  .brand img {
+    width: 24px;
+    height: 24px;
+  }
+  .sidebar nav {
+    padding: 8px 6px;
+  }
+  .nav-item {
+    justify-content: center;
+    padding: 8px 4px;
+  }
+  .sidebar-footer {
+    min-height: 78px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4px;
+    gap: 4px;
+  }
+  .sidebar-footer .icon-button {
+    width: 28px;
+    padding: 4px;
+  }
+  .topbar {
+    padding: 0 10px;
+  }
+  .workspace-identity > .badge,
+  .workspace-state {
+    display: none;
+  }
+  .workspace-toolbar {
+    padding: 8px 10px;
+  }
+  .panel {
+    margin: 8px;
+    padding: 12px;
+  }
+  .metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 18px;
+  }
+  .metrics > div:nth-child(3) {
+    padding-left: 0;
+  }
+  .metrics > div:nth-child(2) {
+    border: 0;
+  }
+  .range-strip > .muted {
+    margin-left: 0;
+  }
+  .status-footer > span:last-child {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-content {
+    scroll-behavior: auto;
+  }
+}

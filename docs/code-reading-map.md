@@ -42,6 +42,20 @@ summary 按工具定义：DNS 为服务器/记录类型/耗时/数量；端口�
 
 ## 项目规划保存
 
+`ProjectPanel.vue` 拥有项目导航、草稿与保存；`ProjectDialog.vue` 展示创建/编辑、维护记录
+和 Excel 导入预览，以模型和事件回到父层，不直接访问原生服务。`SiteAcceptancePanel.vue`
+拥有验收领域操作与保存前后的项目身份校验，`SiteAcceptanceDialog.vue` 负责编辑/详情和
+表单焦点入口。两者通过 `siteAcceptancePresentation.js` 共享显示标签，验收样式在
+`site-acceptance.css` 作为各组件的 scoped 样式编译，避免拆分后丢失样式作用域。
+
+`electron/excel.cjs` 保留原有导出 API，`excel-schema.cjs` 统一 schema 与模板位置，
+`excel-writer.cjs` 按顺序组装工作表，`excel-reader.cjs` 校验不受信任单元格及项目引用。
+专题工程 Excel 模块继续复用；原有文件/行数上限及公式、链接、富文本拒绝规则不变。
+原生导出仍经过安全写入器，测试输出须放在隔离应用数据目录之外。
+
+`src/style.css` 为有序入口，`src/style/` 按基础控件、导航、工作区、表格/反馈、
+页脚/响应式分区；主题 token 与统一弹窗仍沿用 `src/styles/` 中的既有模块。
+
 `ProjectPanel.vue` → `Planner.vue` 捕获导入项目 ID 与操作版本 → `App.vue.saveNetworks()` 核对项目并隔离跨项目 ID → runtime.save → IPC → `applyWorkspacePatch` → Store 事务保存。页面停用、切换项目或卸载使旧导入失效；数据库与规划校验仍以现有领域模块为准。
 
 ## 场地需求与容量

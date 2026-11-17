@@ -13,6 +13,7 @@ test("projects: scenarios, ledger, maintenance, Excel preview/import, SQLite res
   const folder = await fs.mkdtemp(
     path.join(os.tmpdir(), "nettool-projects-ui-"),
   );
+  const exports = await fs.mkdtemp(path.join(os.tmpdir(), "nettool-projects-exports-"));
   let app;
   const launch = () =>
     electron.launch({
@@ -87,7 +88,7 @@ test("projects: scenarios, ledger, maintenance, Excel preview/import, SQLite res
     await page.getByRole("button", { name: "停止", exact: true }).click();
     await expect(page.getByLabel("当前项目")).toBeEnabled();
     await page.getByRole("button", { name: "项目工作台", exact: true }).click();
-    const output = path.join(folder, "office.xlsx");
+    const output = path.join(exports, "office.xlsx");
     await app.evaluate(({ dialog }, file) => {
       dialog.showSaveDialog = async () => ({ canceled: false, filePath: file });
     }, output);
@@ -201,5 +202,6 @@ test("projects: scenarios, ledger, maintenance, Excel preview/import, SQLite res
   } finally {
     if (app) await app.close();
     await fs.rm(folder, { recursive: true, force: true });
+    await fs.rm(exports, { recursive: true, force: true });
   }
 });
