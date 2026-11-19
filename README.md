@@ -2,7 +2,9 @@
 
 # Ineed NetTool
 
-面向企业办公室、园区与工程现场的网络规划和诊断桌面工具。把场地需求、地址规划、设备连接、容量校核和现场验收放到同一个项目里，让规划资料能继续用于交付与维护。
+简体中文 · [English](README.en.md)
+
+**开源网络工具箱与网络工程规划软件。** 面向企业办公室、园区和工程现场，提供 IP 地址管理（IPAM）、IPv4 子网/VLSM 计算、VLAN 与拓扑规划、Ping/DNS/路由跟踪及端口诊断。把场地需求、设备连接、容量校核和验收证据放进同一个项目，让规划资料能继续用于交付与维护。
 
 [产品官网](https://nettool.ineedfull.com/) · [下载安装](https://nettool.ineedfull.com/downloads/) · [工程规划](docs/network-engineering.md) · [开发指南](docs/development.md)
 
@@ -91,4 +93,13 @@ UI 测试会启动 Electron；本项目没有 `lint` 脚本。开发、数据备
 
 也可以发邮件：[xiaopanghhh@163.com](mailto:xiaopanghhh@163.com)。
 
-同系列工具：[MQTT Tool](https://mqtt.ineedfull.com/) · [LinkLab](https://linklab.ineedfull.com/) · [NetTool](https://nettool.ineedfull.com/) · [Ineed 主站](https://www.ineedfull.com/)。
+## 同系列开源工具
+
+| 工具 | 主要用途 | 产品官网 | 源码 |
+| --- | --- | --- | --- |
+| MQTT Tool | MQTT 客户端、按订阅独立显示 JSON/Text/HEX、设备消息场景 | [官网](https://mqtt.ineedfull.com/) | [GitHub](https://github.com/ineedfull/ineed-mqtt-tool) · [Gitee](https://gitee.com/ineedfull/ineed-mqtt-tool) |
+| LinkLab | 串口与工业协议联调、客户端/模拟服务端、设备验收 | [官网](https://linklab.ineedfull.com/) | [GitHub](https://github.com/ineedfull/ineed-linklab) · [Gitee](https://gitee.com/ineedfull/ineed-linklab) |
+| NetTool | IP 地址管理、网络工程规划与诊断、现场交付 | [官网](https://nettool.ineedfull.com/) | [GitHub](https://github.com/ineedfull/ineed-net-tool) · [Gitee](https://gitee.com/ineedfull/ineed-net-tool) |
+| StorageLab | MinIO/S3 与多厂商对象存储管理、目录交付校验 | [官网](https://storagelab.ineedfull.com/) | [GitHub](https://github.com/ineedfull/ineed-storagelab) · [Gitee](https://gitee.com/ineedfull/ineed-storagelab) |
+
+Ineed 主站：[www.ineedfull.com](https://www.ineedfull.com/)。
