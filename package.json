@@ -56,7 +56,7 @@
       "identity": null,
       "artifactName": "${productName}-${version}-macos-${arch}.${ext}",
       "extendInfo": {
-        "CFBundleName": "iNeed Net Tool",
+        "CFBundleName": "Ineed Net Tool",
         "CFBundleDisplayName": "iNeed Net Tool"
       }
     },

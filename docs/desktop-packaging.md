@@ -86,3 +86,7 @@ npm run release:upload -- --dir=/完整路径/release/desktop/某次构建目录
 每种系统/架构独立验证安装、图标、普通用户启动、关闭重开、SQLite 迁移与旧历史保留、卸载策略、中文/空格路径，以及网络诊断、项目与 Excel 导入导出。配置目标不能代替这些验收；AppImage 仍需检查 glibc/FUSE 等系统要求。
 
 本轮三平台计划、Electron 配置 schema、产物完整性与模拟上传回归、NetTool Node 测试和 renderer 构建通过。没有实际安装包构建、Windows/Linux 原生安装、Mac Intel 实机、正式签名/公证、自动更新或公开发布验收。
+
+## macOS 内部名称
+
+`build.mac.extendInfo.CFBundleName` 必须与 `build.productName` 完全一致，包括大小写；Chromium 据此定位 Helper。对外品牌用 `CFBundleDisplayName` 保留“iNeed Net Tool”。更改打包名称后应从最终 DMG 提取应用并启动验证，不能只检查文件摘要。
