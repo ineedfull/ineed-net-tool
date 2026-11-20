@@ -6,7 +6,7 @@
 
 **开源网络工具箱与网络工程规划软件。** 面向企业办公室、园区和工程现场，提供 IP 地址管理（IPAM）、IPv4 子网/VLSM 计算、VLAN 与拓扑规划、Ping/DNS/路由跟踪及端口诊断。把场地需求、设备连接、容量校核和验收证据放进同一个项目，让规划资料能继续用于交付与维护。
 
-[产品官网](https://nettool.ineedfull.com/) · [下载安装](https://nettool.ineedfull.com/downloads/) · [工程规划](docs/network-engineering.md) · [开发指南](docs/development.md)
+[产品官网](https://nettool.ineedfull.com/) · [下载安装](https://nettool.ineedfull.com/downloads/) · [工程规划](docs/network-engineering.md) · [开发指南](docs/development.md) · [快速上手](docs/quick-start.md)
 
 [![NetTool 项目工作台：地址规划、VLAN、网关与 DHCP](docs/images/readme/planning.webp)](docs/images/readme/planning.webp)
 
@@ -42,6 +42,10 @@ IP 地址探测、Ping、DNS、路由跟踪、TCP 端口、下载测速、链路
 [![Ping 诊断：目标信息、收发统计与时延曲线](docs/images/readme/ping.webp)](docs/images/readme/ping.webp)
 
 ## 开始使用
+
+本轮测试版：`0.1.1`，调整范围见[版本说明](docs/releases/2026-11-20.md)。已可下载的文件及构建标识以官网下载页为准。
+
+第一次使用？先按[快速上手](docs/quick-start.md)完成一个小练习，里面列出了示例参数、成功判断和常见问题排查。
 
 新建项目，选择空白项目或办公室、监控、三运营商双网等模板。先登记需求与网段，再完善设备、接口和链路；完成诊断后将需要处理的问题转入现场验收，最终导出交付资料。
 

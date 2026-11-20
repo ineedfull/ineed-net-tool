@@ -6,7 +6,7 @@
 
 **An open-source network toolbox for IP address management (IPAM), network planning and diagnostics.** Plan office and campus networks with IPv4 subnet/VLSM calculations, VLANs, registered topology, PoE and bandwidth capacity checks. Keep diagnostic evidence and acceptance records with the project, then export the engineering handover to Excel.
 
-[Website](https://nettool.ineedfull.com/) · [Downloads](https://nettool.ineedfull.com/downloads/) · [GitHub](https://github.com/ineedfull/ineed-net-tool) · [Gitee](https://gitee.com/ineedfull/ineed-net-tool)
+[Website](https://nettool.ineedfull.com/) · [Downloads](https://nettool.ineedfull.com/downloads/) · [GitHub](https://github.com/ineedfull/ineed-net-tool) · [Gitee](https://gitee.com/ineedfull/ineed-net-tool) · [Quick start (中文)](docs/quick-start.md)
 
 [![NetTool project workbench with subnet, VLAN, gateway and DHCP planning](docs/images/readme/planning.webp)](docs/images/readme/planning.webp)
 
